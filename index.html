@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kawaguchi Lottery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="theme_yam.css" type="text/css">
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180x180.png">
+</head>
+
+<body class="" >
+  <div class="py-4 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <h1 class="display-5 text-capitalize">Kawaguchi Lottery</h1>
+
+          <hr>
+
+          <div class="form-group">
+            <form name="ktimer"> <input type="text" class="form-control form-control-lg text-center" placeholder="Large input" name="counter"> </form>
+          </div>
+          <hr>
+  		  <div class="dropdown">
+	 		  <a class="btn btn-primary btn-lg btn-block dropdown-toggle mb-2" id="dropdown1" data-toggle="dropdown" >
+	 		    エントリー数
+	 		  </a>
+	 		  <div  class="dropdown-menu" aria-labelledby="dropdown1">
+	 		    <a class="dropdown-item" value="1">1</a>
+	 		    <a class="dropdown-item" value="2">2</a>
+	 		    <a class="dropdown-item" value="3">3</a>
+	 		    <a class="dropdown-item" value="4">4</a>
+	 		    <a class="dropdown-item" value="5">5</a>
+	 		    <a class="dropdown-item" value="6">6</a>
+	 		    <a class="dropdown-item" value="7">7</a>
+	 		    <a class="dropdown-item" value="8">8</a>
+	 		    <a class="dropdown-item" value="9">9</a>
+	 		    <a class="dropdown-item" value="10">10</a>
+	 		    <a class="dropdown-item" value="11">11</a>
+	 		    <a class="dropdown-item" value="12">12</a>
+	 		    <a class="dropdown-item" value="13">13</a>
+	 		    <a class="dropdown-item" value="14">14</a>
+	 		    <a class="dropdown-item" value="15">15</a>
+	 		    <a class="dropdown-item" value="16">16</a>
+	 		    <a class="dropdown-item" value="17">17</a>
+	 		    <a class="dropdown-item" value="18">18</a>
+	 		    <a class="dropdown-item" value="19">19</a>
+	 		    <a class="dropdown-item" value="20">20</a>
+	 		    <a class="dropdown-item" value="21">21</a>
+	 		    <a class="dropdown-item" value="22">22</a>
+	 		    <a class="dropdown-item" value="23">23</a>
+	 		    <a class="dropdown-item" value="24">24</a>
+	 		    <a class="dropdown-item" value="25">25</a>
+	 		    <a class="dropdown-item" value="26">26</a>
+	 		    <a class="dropdown-item" value="27">27</a>
+	 		    <a class="dropdown-item" value="28">28</a>
+	 		    <a class="dropdown-item" value="29">29</a>
+	 		    <a class="dropdown-item" value="30">30</a>
+	 		    <a class="dropdown-item" value="31">31</a>
+	 		    <a class="dropdown-item" value="32">32</a>
+	 		    <a class="dropdown-item" value="33">33</a>
+	 		    <a class="dropdown-item" value="34">34</a>
+	 		    <a class="dropdown-item" value="35">35</a>
+	 		    <a class="dropdown-item" value="36">36</a>
+	 		    <a class="dropdown-item" value="37">37</a>
+	 		    <a class="dropdown-item" value="38">38</a>
+	 		    <a class="dropdown-item" value="39">39</a>
+	 		    <a class="dropdown-item" value="40">40</a>
+	 		  </div>
+ 		  </div>
+  		  <div class="dropdown">
+	 		  <a class="btn btn-success btn-lg btn-block dropdown-toggle mb-3" id="dropdown2" data-toggle="dropdown">
+	 		    当選数
+	 		  </a>
+	 		  <div class="dropdown-menu" aria-labelledby="dropdown2">
+	 		    <a class="dropdown-item" value="1">1</a>
+	 		    <a class="dropdown-item" value="2">2</a>
+	 		    <a class="dropdown-item" value="3">3</a>
+	 		    <a class="dropdown-item" value="4">4</a>
+	 		    <a class="dropdown-item" value="5">5</a>
+	 		    <a class="dropdown-item" value="6">6</a>
+	 		    <a class="dropdown-item" value="7">7</a>
+	 		    <a class="dropdown-item" value="8">8</a>
+	 		    <a class="dropdown-item" value="9">9</a>
+	 		    <a class="dropdown-item" value="10">10</a>
+	 		    <a class="dropdown-item" value="11">11</a>
+	 		    <a class="dropdown-item" value="12">12</a>
+	 		    <a class="dropdown-item" value="13">13</a>
+	 		    <a class="dropdown-item" value="14">14</a>
+	 		    <a class="dropdown-item" value="15">15</a>
+	 		    <a class="dropdown-item" value="16">16</a>
+	 		    <a class="dropdown-item" value="17">17</a>
+	 		    <a class="dropdown-item" value="18">18</a>
+	 		    <a class="dropdown-item" value="19">19</a>
+	 		    <a class="dropdown-item" value="20">20</a>
+	 		  </div>
+ 		  </div>
+          <a class="btn btn-danger btn-lg btn-block" href="#" onclick="lotteryGo()">抽選！</a>
+          <a class="btn btn-secondary btn-lg btn-block" href="#" onclick="Sort()">並べ替え</a>
+ 
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="bg-info py-3">
+      <div class="container">
+        <div class="row d-flex justify-content-between">
+          <div class="col-lg-4 col-md-6">
+            <p class="text-secondary mb-0">Copyright 2022 STG yk</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" style=""></script>
+  <script type="text/javascript" style="">
+    //初期設定
+	var entryNum = 0;
+	var chosenNum = 0;
+	var resultTex = "";
+	var array = new Array();
+	console.log('array length : ' + array.length );
+	document.ktimer.counter.value = '川口抽選ページ';
+
+	$(function(){
+        $('.dropdown-menu .dropdown-item').click(function(){
+            var visibleItem = $('.dropdown-toggle', $(this).closest('.dropdown'));
+            var id = visibleItem.closest('[id]').attr('id');
+            console.log( visibleItem );
+            console.log( id );
+            if (id == 'dropdown1'){
+				visibleItem.text('エントリー数: ' + $(this).attr('value') + ' ');
+				entryNum = Number($(this).attr('value'));
+	            console.log('entryNum: ' + entryNum );
+			}
+			else if (id == 'dropdown2'){
+				visibleItem.text('当選数: ' + $(this).attr('value') + ' ');
+				chosenNum = Number($(this).attr('value'));
+	            console.log('chosenNum: ' + chosenNum );
+			}
+        });
+    });
+
+	function getRandomInt(max) {
+		//乱数により0～(max-1)の整数を発生する。
+  		return Math.floor(Math.random() * max);
+	}
+	
+	function lotteryGo(){
+		//抽選開始
+        document.ktimer.counter.value = ''
+        console.log('entryNum: ' + entryNum );
+        console.log('chosenNum: ' + chosenNum );
+		if ( entryNum < 1) {document.ktimer.counter.value = 'エントリー数が０です。';	return;}
+		if ( chosenNum < 1) {document.ktimer.counter.value = '当選数が０です。';	return;}
+		if ( entryNum < chosenNum) {document.ktimer.counter.value = '当選数がエントリー数を上回っています。';	return;}
+		//if ( entryNum == chosenNum) {document.ktimer.counter.value = '当選数とエントリー数が同じです。';	return;}
+		
+		array.length = chosenNum;
+		for (var i = 0; i < chosenNum; i++) array[i] = 0;	//初期化
+		for (var i = 0; i < chosenNum; i++) {
+			var random = 0;
+			do{
+				var existFlag = false;
+				random = getRandomInt(entryNum) + 1;
+				for(var j=0;j<i;j++) if(array[j] == random) existFlag = true;
+			}while(existFlag);
+			array[i] = random;
+		}
+        console.log('array: ' + array );
+		document.ktimer.counter.value = array;	
+	}
+	
+	function Sort(){
+		//並べ替え
+		if (!array.length) return;
+		var result = array.sort(function(a,b){return (a<b)? -1:1;});
+		document.ktimer.counter.value = result;	
+	}
+
+
+  </script>
+</body>
+
+</html>
